@@ -4,6 +4,6 @@ import 'package:meta/meta.dart';
 abstract class DayRepository {
   Future<Day> getDay({
     @required double latitude,
-    @required longitude,
+    @required double longitude,
   });
 }
