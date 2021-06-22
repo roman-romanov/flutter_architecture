@@ -1,7 +1,7 @@
-import 'package:habr_flutter_clean_arch/domain/model/day.dart';
-import 'package:habr_flutter_clean_arch/domain/repository/day_repository.dart';
 import 'package:mobx/mobx.dart';
 import 'package:meta/meta.dart';
+import 'package:habr_flutter_clean_arch/domain/repository/day_repository.dart';
+import 'package:habr_flutter_clean_arch/domain/model/day.dart';
 
 part 'home_state.g.dart';
 
@@ -24,8 +24,7 @@ abstract class HomeStateBase with Store {
     @required double longitude,
   }) async {
     isLoading = true;
-    final data =
-        await _dayRepository.getDay(latitude: latitude, longitude: longitude);
+    final data = await _dayRepository.getDay(latitude: latitude, longitude: longitude);
     day = data;
     isLoading = false;
   }

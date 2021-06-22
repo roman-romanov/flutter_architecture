@@ -1,9 +1,10 @@
-import 'package:architecture/data/repository/day_data_repository.dart';
-import 'package:architecture/domain/repository/day_repository.dart';
-import 'package:architecture/internal/dependencies/api_module.dart';
+import 'package:habr_flutter_clean_arch/data/repository/day_data_repository.dart';
+import 'package:habr_flutter_clean_arch/domain/repository/day_repository.dart';
+
+import 'api_module.dart';
 
 class RepositoryModule {
-  static DayRepository? _dayRepository;
+  static DayRepository _dayRepository;
 
   static DayRepository dayRepository() {
     if (_dayRepository == null) {
@@ -11,6 +12,6 @@ class RepositoryModule {
         ApiModule.apiUtil(),
       );
     }
-    return _dayRepository!;
+    return _dayRepository;
   }
 }

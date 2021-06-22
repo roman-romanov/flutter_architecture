@@ -1,7 +1,6 @@
-import 'package:architecture/data/api/model/api_day.dart';
-import 'package:architecture/data/api/request/get_day_body.dart';
 import 'package:dio/dio.dart';
-
+import 'package:habr_flutter_clean_arch/data/api/model/api_day.dart';
+import 'package:habr_flutter_clean_arch/data/api/request/get_day_body.dart';
 
 class SunriseService {
   static const _BASE_URL = 'https://api.sunrise-sunset.org';
